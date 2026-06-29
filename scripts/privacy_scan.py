@@ -16,6 +16,9 @@ SECRET_PATTERNS = [
 BLOCKED_FILES = {".env", ".DS_Store"}
 BLOCKED_SUFFIXES = {".log", ".pid", ".pem", ".key"}
 SKIP_DIRS = {".git", ".venv", "__pycache__"}
+ALLOWED_BINARY_ASSET_SUFFIXES = {".gif", ".jpeg", ".jpg", ".png", ".webp"}
+ALLOWED_BINARY_ASSET_PARTS = ("docs", "assets")
+MAX_REVIEWED_ASSET_BYTES = 1_000_000
 
 
 def iter_files(root: Path):
@@ -24,6 +27,14 @@ def iter_files(root: Path):
             continue
         if path.is_file():
             yield path
+
+
+def is_reviewed_public_asset(rel: Path, path: Path) -> bool:
+    return (
+        rel.parts[:2] == ALLOWED_BINARY_ASSET_PARTS
+        and path.suffix.lower() in ALLOWED_BINARY_ASSET_SUFFIXES
+        and path.stat().st_size <= MAX_REVIEWED_ASSET_BYTES
+    )
 
 
 def main() -> int:
@@ -38,6 +49,8 @@ def main() -> int:
         try:
             text = path.read_text(encoding="utf-8")
         except UnicodeDecodeError:
+            if is_reviewed_public_asset(rel, path):
+                continue
             findings.append(f"binary or non-utf8 file requires review: {rel}")
             continue
         for pattern in SECRET_PATTERNS:

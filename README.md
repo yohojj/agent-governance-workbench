@@ -10,9 +10,9 @@ Most agent frameworks help you build agents. This workbench helps you operate ag
 
 ## Dashboard preview
 
-![Synthetic dashboard preview](docs/assets/dashboard-preview.svg)
+![Synthetic dashboard screenshot](docs/assets/dashboard-screenshot.png)
 
-The preview uses only bundled synthetic data. If you replace it with a GIF, keep the same privacy boundary: no browser chrome, no local paths, no real people, no private task histories, and no customer or production data.
+The screenshot uses only bundled synthetic data. If you replace it with a GIF, keep the same privacy boundary: no browser chrome, no local paths, no real people, no private task histories, and no customer or production data.
 
 ## Why this exists
 

@@ -12,11 +12,12 @@
 - Push the repository.
 - Add repository topics.
 - Pin the repository on the profile.
+- Add the social preview image in repository settings.
 - Share a short launch note.
 
 ## Day 2: Distribution
 
-- Add a screenshot or GIF.
+- Share the dashboard screenshot and launch copy from `docs/launch-kit.md`.
 - Open beginner-friendly issues.
 - Share a deeper write-up on why agent governance matters.
 - Improve README based on first feedback.
