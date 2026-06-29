@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+*.pid
+.streamlit/secrets.toml
+review-notes/
+dist/
+build/
+.idea/
+.vscode/

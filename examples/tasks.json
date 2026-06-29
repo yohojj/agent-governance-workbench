@@ -1,0 +1,49 @@
+[
+  {
+    "id": "item-001",
+    "title": "Draft governance templates",
+    "summary": "Create generic handoff and result-card templates for a research agent team.",
+    "owner": "Builder",
+    "risk": "low",
+    "status": "done",
+    "next_action": "Archive result card",
+    "evidence": [
+      "templates/handoff-card.md",
+      "templates/result-card.md"
+    ]
+  },
+  {
+    "id": "item-002",
+    "title": "Review public release package",
+    "summary": "Check whether the release package contains private paths, secrets, or real user data.",
+    "owner": "Reviewer",
+    "risk": "high",
+    "status": "review",
+    "next_action": "Run privacy checklist",
+    "evidence": [
+      "docs/privacy-checklist.md"
+    ]
+  },
+  {
+    "id": "item-003",
+    "title": "Prepare dashboard screenshot",
+    "summary": "Create a screenshot for the README after the local dashboard is verified.",
+    "owner": "Operator",
+    "risk": "medium",
+    "status": "ready",
+    "next_action": "Run local dashboard smoke test",
+    "evidence": []
+  },
+  {
+    "id": "item-004",
+    "title": "Publish release",
+    "summary": "Push the repository and update project metadata after all gates pass.",
+    "owner": "Operator",
+    "risk": "high",
+    "status": "blocked",
+    "next_action": "Wait for human approval",
+    "evidence": [
+      "templates/approval-gate.md"
+    ]
+  }
+]

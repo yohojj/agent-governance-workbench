@@ -1,0 +1,50 @@
+[
+  {
+    "id": "coordinator",
+    "name": "Coordinator",
+    "owner": "Operations lead",
+    "mission": "Route requests, define success criteria, and decide whether work needs review.",
+    "default_risk": "medium",
+    "status": "ready",
+    "boundaries": [
+      "does not execute production changes",
+      "does not approve its own output"
+    ]
+  },
+  {
+    "id": "builder",
+    "name": "Builder",
+    "owner": "Implementation lead",
+    "mission": "Complete scoped implementation tasks with explicit inputs and outputs.",
+    "default_risk": "medium",
+    "status": "running",
+    "boundaries": [
+      "uses synthetic examples",
+      "stops on missing requirements"
+    ]
+  },
+  {
+    "id": "reviewer",
+    "name": "Reviewer",
+    "owner": "Quality lead",
+    "mission": "Check correctness, privacy, safety, and evidence before work moves forward.",
+    "default_risk": "high",
+    "status": "review",
+    "boundaries": [
+      "read-only by default",
+      "cannot edit what it reviews"
+    ]
+  },
+  {
+    "id": "operator",
+    "name": "Operator",
+    "owner": "Release lead",
+    "mission": "Run release checklists and publish only after gates pass.",
+    "default_risk": "high",
+    "status": "waiting",
+    "boundaries": [
+      "requires explicit approval",
+      "keeps rollback notes"
+    ]
+  }
+]

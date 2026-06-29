@@ -1,0 +1,28 @@
+[
+  {
+    "id": "public-release",
+    "name": "Safe public release",
+    "summary": "A staged workflow for publishing an agent project without leaking private data.",
+    "stages": [
+      "Create clean-room directory",
+      "Generate synthetic examples only",
+      "Run secret and privacy scans",
+      "Complete independent review",
+      "Request explicit human approval",
+      "Publish and verify public pages"
+    ]
+  },
+  {
+    "id": "agent-task",
+    "name": "Agent task handoff",
+    "summary": "A minimal handoff loop for scoped agent work.",
+    "stages": [
+      "Write task card",
+      "Classify risk",
+      "Assign owner",
+      "Execute within scope",
+      "Write result card",
+      "Review evidence"
+    ]
+  }
+]

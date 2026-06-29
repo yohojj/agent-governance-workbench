@@ -1,0 +1,26 @@
+[
+  {
+    "risk": "Secret exposure",
+    "level": "high",
+    "trigger": "A task needs credentials, tokens, or local environment files.",
+    "control": "Stop and require a private channel or secret manager. Never commit secrets."
+  },
+  {
+    "risk": "Unreviewed public release",
+    "level": "high",
+    "trigger": "A task intends to publish files to a public platform.",
+    "control": "Require independent privacy review and explicit human approval."
+  },
+  {
+    "risk": "Scope drift",
+    "level": "medium",
+    "trigger": "An agent expands a task beyond the handoff card.",
+    "control": "Return to coordinator with a revised task card."
+  },
+  {
+    "risk": "Missing evidence",
+    "level": "medium",
+    "trigger": "A result claims success without files, logs, screenshots, or test output.",
+    "control": "Mark the result incomplete until evidence is attached."
+  }
+]
