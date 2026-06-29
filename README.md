@@ -1,8 +1,8 @@
 # Agent Governance Workbench
 
-A lightweight AI agent governance workbench with handoff queues, approval gates, audit-ready result cards, and local decision dashboards.
+A local-first dashboard and template kit for safer AI agent workflows.
 
-Most agent frameworks help you build agents. This workbench helps you operate agent teams safely.
+Most agent frameworks help you build agents. This workbench helps you operate agent workflows with clear ownership, risk gates, human approvals, and evidence-backed result cards.
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![Streamlit](https://img.shields.io/badge/ui-streamlit-red)
@@ -30,6 +30,12 @@ Agent Governance Workbench is a small, local-first template for that operating l
 - Privacy-first examples with synthetic data only
 - Templates that can be adapted to any agent framework
 
+## Use this in three ways
+
+- Run the local dashboard to review synthetic task queues, agent roles, risk registers, workflows, and approval gates.
+- Copy the templates for handoff cards, result cards, approval gates, and audit checklists into your own agent workflow.
+- Use the checklists before release to catch secrets, private paths, missing evidence, and unreviewed public actions.
+
 ## Quick start
 
 ```bash
@@ -44,6 +50,10 @@ streamlit run app.py
 Then open the local URL printed by Streamlit.
 
 ## Dashboard preview
+
+![Synthetic dashboard preview](docs/assets/dashboard-preview.svg)
+
+The preview above uses only bundled synthetic data. If you replace it with a GIF, keep the same privacy boundary: no browser chrome, no local paths, no real people, no private task histories, and no customer or production data.
 
 The demo dashboard includes:
 
